@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav {
+            background-color: #d0eedc; /* 원하는 배경색으로 변경 */
+            width: 100%; /* 전체 가로폭 */
+            position: relative;
+        }
+        nav ul li:last-child {
+            margin-right: 0; /* 마지막 li의 마진 제거 */
+        }
+        
+        .team{
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="./location.html" class="logo-link">
+                <img src="./img/allinone.png" alt="AllInOne Logo" class="logo"/>
+                <h1>올인원</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./location.html">지역별 여행지</a></li>
+                <li><a href="./random.html">랜덤 추천</a></li>
+                <li><a href="./team.html">팀원 소개</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="team">
+        <img src="./img/팀원소개.png" alt="" width="70%" height="1000">
+        <img src="./img/팀원소개2.jpg" alt="" width="50%" >
+    </div>
+    <footer>
+        <div id="forTicket">
+            <div id="nickname"></div>
+            <div id="planment">
+                <h4>님의 여행계획</h4>
+            </div>
+        </div>
+        <p>&copy; 2024 AllInOneTeam. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const nickname = document.getElementById("nickname")
+        const name = sessionStorage.getItem("name")
+        nickname.innerText = name
+    </script>
+</body>
+</html>

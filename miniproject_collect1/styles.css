@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+* {
+    font-family: 'S-CoreDream-3Light';
+    /* 
+        (전체선택자) 사용 시, 모든 글자가 해당 폰트로 나오기 때문에,
+        본문용 폰트를 작성하는 것을 추천
+        
+        제목용 폰트는 따로 class를 생성해서 설정하는 것을 추천
+    */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #ffffff;
+    color: #2666cf;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Inherit the color of the parent element */
+}
+
+.logo {
+    max-height: 100px; /* Ensure the logo doesn't exceed 100px in height */
+    margin-right: 10px; /* Optional: Add space between the logo and the text */
+}
+
+.header-container h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #2666cf;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#recommendations {
+    text-align: center;
+}
+
+.tourist-spot {
+    margin: 20px 0;
+}
+
+.tourist-spot img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+#banner {
+    position: relative;
+    width: 100%; /* Full width to fit the container */
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    margin: 20px 0; /* Space around the banner */
+}
+
+.banner-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-image.active {
+    opacity: 1;
+}
+
+#forTicket {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    text-align: center;
+    background-image: url('../img/ti2.png');
+    background-repeat: no-repeat;
+    background-size: 240px;
+    height: 100px;
+}
+
+#forTicket div {
+    margin-right: 37px; /* div 사이 간격 설정 */
+    margin-top: 12px;
+}
+
+#nickname {
+    margin-left: 40px;
+    color: black;
+}
+
+#planment {
+    color: black;
+}
+
+/* Ensure images inside forTicket are sized correctly */
+#forTicket img {
+    height: 100%; /* 이미지 높이를 부모 요소 높이에 맞춤 */
+    max-height: 50px; /* 적절한 최대 높이 설정, 필요에 따라 조정 */
+    margin-right: 10px; /* 이미지 오른쪽 여백 설정 */
+}
+
+footer {
+    background: #ffffff;
+    color: #D3D3D3;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between; /* p 태그와 forTicket div 간의 간격을 확보 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 10px; /* 추가적인 여백 */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin-right: 250px; /* 기본 마진 제거 */
+    flex: 1; /* 여유 공간을 차지하도록 설정 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+nav {
+    background-color: #d0eedc; /* 원하는 배경색으로 변경 */
+    width: 100%; /* 전체 가로폭 */
+    position: relative;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* 마지막 li의 마진 제거 */
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styleMap.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="./location.html" class="logo-link">
+                <img src="./img/allinone.png" alt="AllInOne Logo" class="logo" />
+                <h1>올인원</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./location.html">지역별 여행지</a></li>
+                <li><a href="./random.html">랜덤 추천</a></li>
+                <li><a href="./team.html">팀원 소개</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <div class="banner-image active" style="background-image: url('./img/1.png');"></div>
+            <div class="banner-image" style="background-image: url('./img/2.jpg');"></div>
+            <div class="banner-image" style="background-image: url('./img/3.jpg');"></div>
+        </section>
+        <section id="recommendations">
+            <h2>대한민국 여행지도</h2>
+            <p><b>가고싶은 전라도 여행지를 클릭해주세요 👈</b> </p>
+        </section>
+    </main>
+    <div class="map-container">
+        <div id="map00">
+            <img src="./img/map00.png">
+        </div>
+        <div id="map01">
+            <img src="./img/전라도.png" usemap="#image-map">
+
+            <map name="image-map">
+                <area target="_self" alt="광주광역시" title="광주광역시" href="./광주광역시/gwangju.html" coords="305,385,298,400,285,403,277,411,276,420,270,428,275,439,306,449,310,456,310,463,332,471,340,464,362,457,377,464,380,453,387,453,393,441,396,426,402,418,399,411,390,412,379,400,366,383,350,387,338,396,320,401,309,394" shape="poly">
+                <area target="_self" alt="전라북도" title="전라북도" href="./전라북도/jeollabuk.html" coords="343,37,307,63,232,82,244,99,246,116,326,111,323,127,301,127,275,146,256,183,208,228,235,247,275,254,227,272,203,304,215,340,239,356,272,348,295,329,324,286,340,294,380,319,401,292,407,312,402,322,412,329,409,344,415,358,434,359,463,348,473,358,527,359,539,344,555,336,597,362,611,351,607,332,623,316,623,304,615,286,608,268,603,247,611,226,612,218,621,198,623,172,639,159,651,139,661,139,672,125,701,110,707,87,696,55,684,49,662,56,639,47,632,35,621,50,615,35,607,39,609,51,607,60,582,56,579,66,559,72,539,57,531,63,513,35,511,18,501,14,491,23,484,27,481,33,471,22,460,25,443,27,439,37,426,33,415,33,408,24,410,8,388,2,378,1,371,9,357,1,351,18,350,32" shape="poly">
+                <area target="_self" alt="전라남도" title="전라남도" href="./전라남도/jeollanam.html" coords="605,370,677,488,671,545,655,612,565,687,456,755,372,792,281,787,227,775,213,719,183,710,157,766,107,766,78,742,69,691,14,607,80,449,174,381,321,480,420,463,411,414,362,372,301,371,272,396,255,417,179,355,279,364,324,307,391,327,407,368,547,367,561,352" shape="poly">
+            </map>
+        </div> 
+        <div id="map02">
+            <img src="./img/한반도01.png.jpg">
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer>
+        <div id="forTicket">
+            <div id="nickname"></div>
+            <div id="planment">
+                <h4>님의 여행계획</h4>
+            </div>
+        </div>
+        <p>&copy; 2024 AllInOneTeam. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const nickname = document.getElementById("nickname")
+        const name = sessionStorage.getItem("name")
+        nickname.innerText = name
+    </script>
+</body>
+</html>

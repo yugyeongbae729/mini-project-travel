@@ -1,0 +1,110 @@
+.sidebar {
+    position: fixed; /* 고정 위치 */
+    right: 0; /* 우측 고정 */
+    top: 50%; /* 화면 중간에 위치 */
+    transform: translateY(-50%); /* 화면 중앙 정렬 */
+    width: 100px; /* 너비 설정 */
+    height: 500px; /* 높이 설정, 5개의 버튼이 들어가도록 설정 */
+    background-color: rgba(255, 255, 255, 0); /* 투명도 50% */
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: space-around; /* 버튼 간격 균등 배분 */
+    align-items: center;
+    z-index: 1000; /* 다른 요소보다 위에 보이도록 설정 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+    padding: 10px; /* 내부 여백 */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 그림자 효과 */
+}
+
+.sidebar button {
+    width: 80px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+    background-color: #2666cf; /* 버튼 배경색 */
+    color: #ffffff; /* 버튼 글자색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리를 둥글게 */
+    cursor: pointer; /* 마우스 포인터 변경 */
+    font-size: 14px; /* 글자 크기 */
+    transition: background-color 0.3s; /* 배경색 전환 효과 */
+}
+
+.sidebar button:hover {
+    background-color: #1a2fbe; /* 호버 시 배경색 변경 */
+}
+.text-area{
+    width: 300px;
+}
+
+.btn-a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+   }
+
+   #forTicket {
+       display: flex;
+       align-items: center;
+       /* 수직 중앙 정렬 */
+       text-align: center;
+       background-image: url('../img/ti2.png');
+       background-repeat: no-repeat;
+       background-size: 240px;
+       height: 100px;
+   }
+
+   #forTicket div {
+       margin-right: 37px;
+       /* div 사이 간격 설정 */
+   }
+
+   #nickname {
+       margin-left: 40px;
+       color: black;
+   }
+
+   #planment {
+       color: black;
+   }
+
+   /* Ensure images inside forTicket are sized correctly */
+   #forTicket img {
+       height: 100%;
+       /* 이미지 높이를 부모 요소 높이에 맞춤 */
+       max-height: 50px;
+       /* 적절한 최대 높이 설정, 필요에 따라 조정 */
+       margin-right: 10px;
+       /* 이미지 오른쪽 여백 설정 */
+   }
+
+   footer {
+       background: #ffffff;
+       color: #D3D3D3;
+       padding: 1rem 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 10px;
+       position: fixed;
+       width: 100%;
+       bottom: 0;
+   }
+
+   footer p {
+       margin-right: 250px;
+       flex: 1;
+       text-align: center;
+   }
+
+   nav {
+    background-color: #d0eedc; /* 원하는 배경색으로 변경 */
+    width: 100%; /* 전체 가로폭 */
+    position: relative;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* 마지막 li의 마진 제거 */
+}
